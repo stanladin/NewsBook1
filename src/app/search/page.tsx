@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { CATEGORIES, Category, searchNewsletters, Newsletter } from "@/lib/data";
+import { CATEGORIES, Category, searchNewsletters } from "@/lib/data";
 import NewsletterCard from "@/components/NewsletterCard";
 
 function SearchContent() {
@@ -16,8 +16,6 @@ function SearchContent() {
   const [selectedFrequency, setSelectedFrequency] = useState(
     searchParams.get("frequency") || "all"
   );
-  const [results, setResults] = useState<Newsletter[]>([]);
-  const [hasSearched, setHasSearched] = useState(false);
   const [sortBy, setSortBy] = useState("subscribers");
 
   const frequencies = [
@@ -28,30 +26,11 @@ function SearchContent() {
     { value: "monthly", label: "Monthly" },
   ];
 
-  useEffect(() => {
-    const q = searchParams.get("q") || "";
-    const cat = (searchParams.get("category") as Category) || "all";
-    const freq = searchParams.get("frequency") || "all";
-    setQuery(q);
-    setSelectedCategory(cat);
-    setSelectedFrequency(freq);
-    performSearch(q, cat, freq);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const performSearch = (
-    q: string,
-    cat: Category | "all",
-    freq: string
-  ) => {
-    const found = searchNewsletters(q, cat, freq);
-    setResults(found);
-    setHasSearched(true);
-  };
+  // Search fires live on every state change — no separate performSearch needed
+  const results = searchNewsletters(query, selectedCategory, selectedFrequency);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    performSearch(query, selectedCategory, selectedFrequency);
     const params = new URLSearchParams();
     if (query) params.set("q", query);
     if (selectedCategory !== "all") params.set("category", selectedCategory);
@@ -61,19 +40,16 @@ function SearchContent() {
 
   const handleCategoryChange = (cat: Category | "all") => {
     setSelectedCategory(cat);
-    performSearch(query, cat, selectedFrequency);
   };
 
   const handleFrequencyChange = (freq: string) => {
     setSelectedFrequency(freq);
-    performSearch(query, selectedCategory, freq);
   };
 
   const handleClear = () => {
     setQuery("");
     setSelectedCategory("all");
     setSelectedFrequency("all");
-    performSearch("", "all", "all");
     router.push("/search");
   };
 
@@ -203,31 +179,29 @@ function SearchContent() {
         </div>
 
         {/* Results Count */}
-        {hasSearched && (
-          <div className="mb-6">
-            <p className="text-sm text-gray-500">
-              {sortedResults.length === 0 ? (
-                "No newsletters found"
-              ) : (
-                <>
-                  <span className="font-semibold text-gray-900">
-                    {sortedResults.length}
-                  </span>{" "}
-                  newsletter{sortedResults.length !== 1 ? "s" : ""} found
-                  {query && (
-                    <>
-                      {" "}
-                      for{" "}
-                      <span className="font-semibold text-gray-900">
-                        &ldquo;{query}&rdquo;
-                      </span>
-                    </>
-                  )}
-                </>
-              )}
-            </p>
-          </div>
-        )}
+        <div className="mb-6">
+          <p className="text-sm text-gray-500">
+            {sortedResults.length === 0 && (query || selectedCategory !== "all" || selectedFrequency !== "all") ? (
+              "No newsletters found"
+            ) : (
+              <>
+                <span className="font-semibold text-gray-900">
+                  {sortedResults.length}
+                </span>{" "}
+                newsletter{sortedResults.length !== 1 ? "s" : ""} found
+                {query && (
+                  <>
+                    {" "}
+                    for{" "}
+                    <span className="font-semibold text-gray-900">
+                      &ldquo;{query}&rdquo;
+                    </span>
+                  </>
+                )}
+              </>
+            )}
+          </p>
+        </div>
 
         {/* Results Grid */}
         {sortedResults.length > 0 ? (
@@ -236,7 +210,7 @@ function SearchContent() {
               <NewsletterCard key={newsletter.id} newsletter={newsletter} />
             ))}
           </div>
-        ) : hasSearched ? (
+        ) : (query || selectedCategory !== "all" || selectedFrequency !== "all") ? (
           <div className="text-center py-24">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
