@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Newsletter, CATEGORIES, formatSubscribers } from "@/lib/data";
 import { toggleFavorite, isFavorite } from "@/lib/favorites";
 
@@ -37,7 +36,7 @@ export default function NewsletterCard({
   }[newsletter.frequency];
 
   return (
-    <Link href={`/newsletter/${newsletter.id}`}>
+    <a href={newsletter.url} target="_blank" rel="noopener noreferrer">
       <div className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer h-full flex flex-col">
         {/* Header Gradient */}
         <div
@@ -134,6 +133,6 @@ export default function NewsletterCard({
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
