@@ -20,7 +20,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse inline-block"></span>
-              Discover 1000+ curated newsletters
+              Discover 1000+ newsletters
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tight">
               Your personal{" "}
