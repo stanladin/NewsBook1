@@ -57,7 +57,7 @@ export default function CategoriesPage() {
             Our top four categories with the most popular newsletters
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(["world-news", "sports", "health", "fashion"] as const).map((catId) => {
+            {(["world-news", "sports", "health", "gaming"] as const).map((catId) => {
               const cat = CATEGORIES.find((c) => c.id === catId)!;
               const newsletters = NEWSLETTERS.filter((n) => n.category === catId)
                 .sort((a, b) => b.subscribers - a.subscribers)

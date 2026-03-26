@@ -10,7 +10,7 @@ export default function HomePage() {
   const trending = [...NEWSLETTERS]
     .sort((a, b) => b.subscribers - a.subscribers)
     .slice(0, 4);
-  const topCategories = CATEGORIES.slice(0, 8);
+  const topCategories = [...CATEGORIES.slice(0, 7), CATEGORIES.find(c => c.id === "gaming")!];
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -70,7 +70,7 @@ export default function HomePage() {
               <div className="text-blue-200 text-sm mt-1">Newsletters</div>
             </div>
             <div>
-              <div className="text-3xl font-black text-white">10</div>
+              <div className="text-3xl font-black text-white">11</div>
               <div className="text-blue-200 text-sm mt-1">Categories</div>
             </div>
             <div>
@@ -137,7 +137,12 @@ export default function HomePage() {
                 (c) => c.id === newsletter.category
               );
               return (
-                <Link key={newsletter.id} href={`/newsletter/${newsletter.id}`}>
+                <a
+                  key={newsletter.id}
+                  href={newsletter.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="bg-white rounded-2xl p-4 flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 border border-gray-100">
                     <div className="text-2xl font-black text-gray-200 w-8 shrink-0 text-center">
                       {index + 1}
@@ -171,7 +176,7 @@ export default function HomePage() {
                       <div className="text-xs text-gray-400">subscribers</div>
                     </div>
                   </div>
-                </Link>
+                </a>
               );
             })}
           </div>
