@@ -15,7 +15,7 @@ NewsBook is a complete newsletter discovery and curation app built on Next.js 16
 - [x] Memory bank documentation
 - [x] Recipe system for common features
 - [x] **NewsBook full app build** (2026-03-26)
-  - Home page with hero, featured newsletters, category grid, trending
+  - Home page with hero, category grid, trending
   - Search page with real-time filtering (category, frequency, sort)
   - Categories page with all 10 categories + spotlight section
   - Category detail pages (`/categories/[slug]`)
@@ -25,6 +25,9 @@ NewsBook is a complete newsletter discovery and curation app built on Next.js 16
   - Navbar with responsive mobile menu and user dropdown
   - 21 curated mock newsletters across 10 categories
   - Favorite/save functionality with localStorage
+- [x] **Home page update** (2026-03-26)
+  - Removed Featured Newsletters section
+  - Added "most searched" label to category cards showing top newsletter per category
 
 ## Current Structure
 

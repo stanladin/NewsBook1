@@ -20,9 +20,13 @@ export default function CategoryCard({ categoryId }: CategoryCardProps) {
         <h3 className={`font-bold text-lg ${category.color} mb-1`}>
           {category.label}
         </h3>
-        <p className="text-gray-500 text-sm leading-relaxed mb-3">
+        <p className="text-gray-500 text-sm leading-relaxed mb-2">
           {category.description}
         </p>
+        <div className="text-xs font-medium text-gray-600 mb-3">
+          <span className="text-gray-400">Most searched: </span>
+          {category.mostSearched}
+        </div>
         <div className="flex items-center justify-between">
           <span className="text-xs font-medium text-gray-400">
             {count} newsletter{count !== 1 ? "s" : ""}

@@ -33,6 +33,7 @@ export const CATEGORIES: {
   color: string;
   bgColor: string;
   description: string;
+  mostSearched: string;
 }[] = [
   {
     id: "tech",
@@ -41,6 +42,7 @@ export const CATEGORIES: {
     color: "text-blue-600",
     bgColor: "bg-blue-50",
     description: "Latest in technology, AI, and software",
+    mostSearched: "AI Weekly",
   },
   {
     id: "fashion",
@@ -49,6 +51,7 @@ export const CATEGORIES: {
     color: "text-pink-600",
     bgColor: "bg-pink-50",
     description: "Style, trends, and fashion industry news",
+    mostSearched: "Vogue Insider",
   },
   {
     id: "cooking",
@@ -57,6 +60,7 @@ export const CATEGORIES: {
     color: "text-orange-600",
     bgColor: "bg-orange-50",
     description: "Recipes, food culture, and culinary arts",
+    mostSearched: "The Kitchen Table",
   },
   {
     id: "world-news",
@@ -65,6 +69,7 @@ export const CATEGORIES: {
     color: "text-green-600",
     bgColor: "bg-green-50",
     description: "Global events, politics, and world affairs",
+    mostSearched: "The Global Brief",
   },
   {
     id: "finance",
@@ -73,6 +78,7 @@ export const CATEGORIES: {
     color: "text-emerald-600",
     bgColor: "bg-emerald-50",
     description: "Markets, investing, and personal finance",
+    mostSearched: "Market Pulse",
   },
   {
     id: "health",
@@ -81,6 +87,7 @@ export const CATEGORIES: {
     color: "text-red-500",
     bgColor: "bg-red-50",
     description: "Wellness, fitness, and medical research",
+    mostSearched: "Wellness Weekly",
   },
   {
     id: "science",
@@ -89,6 +96,7 @@ export const CATEGORIES: {
     color: "text-violet-600",
     bgColor: "bg-violet-50",
     description: "Research, discoveries, and innovation",
+    mostSearched: "Science Digest",
   },
   {
     id: "sports",
@@ -97,6 +105,7 @@ export const CATEGORIES: {
     color: "text-yellow-600",
     bgColor: "bg-yellow-50",
     description: "Sports news, results, and analysis",
+    mostSearched: "The Sporting Edge",
   },
   {
     id: "travel",
@@ -105,6 +114,7 @@ export const CATEGORIES: {
     color: "text-sky-600",
     bgColor: "bg-sky-50",
     description: "Destinations, tips, and travel guides",
+    mostSearched: "Wanderlust Weekly",
   },
   {
     id: "culture",
@@ -113,6 +123,7 @@ export const CATEGORIES: {
     color: "text-purple-600",
     bgColor: "bg-purple-50",
     description: "Arts, entertainment, and pop culture",
+    mostSearched: "Culture Club",
   },
 ];
 

@@ -2,14 +2,11 @@ import Link from "next/link";
 import {
   NEWSLETTERS,
   CATEGORIES,
-  getFeaturedNewsletters,
   formatSubscribers,
 } from "@/lib/data";
-import NewsletterCard from "@/components/NewsletterCard";
 import CategoryCard from "@/components/CategoryCard";
 
 export default function HomePage() {
-  const featured = getFeaturedNewsletters().slice(0, 6);
   const trending = [...NEWSLETTERS]
     .sort((a, b) => b.subscribers - a.subscribers)
     .slice(0, 4);
@@ -85,45 +82,6 @@ export default function HomePage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 space-y-16">
-        {/* Featured Newsletters */}
-        <section>
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-2xl font-black text-gray-900">
-                Featured Newsletters
-              </h2>
-              <p className="text-gray-500 text-sm mt-1">
-                Hand-picked by our editorial team
-              </p>
-            </div>
-            <Link
-              href="/search"
-              className="text-sm font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors"
-            >
-              View all
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featured.map((newsletter) => (
-              <NewsletterCard key={newsletter.id} newsletter={newsletter} />
-            ))}
-          </div>
-        </section>
-
         {/* Categories */}
         <section>
           <div className="flex items-center justify-between mb-6">
