@@ -1,10 +1,10 @@
-# Active Context: Next.js Starter Template
+# Active Context: NewsBook App
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**App Status**: ✅ Fully built and deployed
 
-The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
+NewsBook is a complete newsletter discovery and curation app built on Next.js 16 with TypeScript and Tailwind CSS 4. Users can search, browse, save, and organize newsletters across 10 categories.
 
 ## Recently Completed
 
@@ -14,74 +14,50 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] ESLint configuration
 - [x] Memory bank documentation
 - [x] Recipe system for common features
+- [x] **NewsBook full app build** (2026-03-26)
+  - Home page with hero, featured newsletters, category grid, trending
+  - Search page with real-time filtering (category, frequency, sort)
+  - Categories page with all 10 categories + spotlight section
+  - Category detail pages (`/categories/[slug]`)
+  - Newsletter detail pages (`/newsletter/[id]`)
+  - Members area with saved favorites organized by category
+  - Auth page with sign in / sign up using localStorage persistence
+  - Navbar with responsive mobile menu and user dropdown
+  - 21 curated mock newsletters across 10 categories
+  - Favorite/save functionality with localStorage
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page | ✅ Ready |
-| `src/app/layout.tsx` | Root layout | ✅ Ready |
-| `src/app/globals.css` | Global styles | ✅ Ready |
-| `.kilocode/` | AI context & recipes | ✅ Ready |
+| `src/app/page.tsx` | Home/discovery page | ✅ Done |
+| `src/app/layout.tsx` | Root layout with Navbar | ✅ Done |
+| `src/app/globals.css` | Global styles + scrollbar hide | ✅ Done |
+| `src/app/search/page.tsx` | Search with filters | ✅ Done |
+| `src/app/categories/page.tsx` | All categories overview | ✅ Done |
+| `src/app/categories/[slug]/page.tsx` | Category detail | ✅ Done |
+| `src/app/newsletter/[id]/page.tsx` | Newsletter detail | ✅ Done |
+| `src/app/members/page.tsx` | Member library (favorites) | ✅ Done |
+| `src/app/auth/page.tsx` | Sign in / Sign up | ✅ Done |
+| `src/components/Navbar.tsx` | Sticky navbar with auth state | ✅ Done |
+| `src/components/NewsletterCard.tsx` | Newsletter card with favorite | ✅ Done |
+| `src/components/CategoryCard.tsx` | Category card | ✅ Done |
+| `src/components/FavoriteButton.tsx` | Heart toggle button | ✅ Done |
+| `src/lib/data.ts` | Newsletter data + search utils | ✅ Done |
+| `src/lib/favorites.ts` | localStorage favorites + user | ✅ Done |
 
-## Current Focus
+## Tech Decisions
 
-The template is ready. Next steps depend on user requirements:
-
-1. What type of application to build
-2. What features are needed
-3. Design/branding preferences
-
-## Quick Start Guide
-
-### To add a new page:
-
-Create a file at `src/app/[route]/page.tsx`:
-```tsx
-export default function NewPage() {
-  return <div>New page content</div>;
-}
-```
-
-### To add components:
-
-Create `src/components/` directory and add components:
-```tsx
-// src/components/ui/Button.tsx
-export function Button({ children }: { children: React.ReactNode }) {
-  return <button className="px-4 py-2 bg-blue-600 text-white rounded">{children}</button>;
-}
-```
-
-### To add a database:
-
-Follow `.kilocode/recipes/add-database.md`
-
-### To add API routes:
-
-Create `src/app/api/[route]/route.ts`:
-```tsx
-import { NextResponse } from "next/server";
-
-export async function GET() {
-  return NextResponse.json({ message: "Hello" });
-}
-```
-
-## Available Recipes
-
-| Recipe | File | Use Case |
-|--------|------|----------|
-| Add Database | `.kilocode/recipes/add-database.md` | Data persistence with Drizzle + SQLite |
-
-## Pending Improvements
-
-- [ ] Add more recipes (auth, email, etc.)
-- [ ] Add example components
-- [ ] Add testing setup recipe
+- **Auth**: Simulated with localStorage (no real backend needed)
+- **Favorites**: Persisted in localStorage key `newsbook_favorites`
+- **User session**: Persisted in localStorage key `newsbook_user`
+- **State init**: Using lazy `useState(() => ...)` for localStorage reads to avoid ESLint `react-hooks/set-state-in-effect` errors
+- **Font**: Inter (replaced Geist)
+- **Categories**: tech, fashion, cooking, world-news, finance, health, science, sports, travel, culture
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
+| 2026-03-26 | Full NewsBook app built — search, categories, members, auth, newsletter detail |
