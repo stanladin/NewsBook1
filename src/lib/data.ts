@@ -9,7 +9,8 @@ export type Category =
   | "sports"
   | "travel"
   | "culture"
-  | "gaming";
+  | "gaming"
+  | "movies";
 
 export interface Newsletter {
   id: string;
@@ -134,6 +135,15 @@ export const CATEGORIES: {
     bgColor: "bg-indigo-50",
     description: "Video games, reviews, and gaming news",
     mostSearched: "PC Gamer",
+  },
+  {
+    id: "movies",
+    label: "Movies",
+    icon: "🎬",
+    color: "text-red-600",
+    bgColor: "bg-red-50",
+    description: "Film news, reviews, and streaming",
+    mostSearched: "IMDb",
   },
 ];
 
@@ -772,6 +782,103 @@ export const NEWSLETTERS: Newsletter[] = [
     featured: false,
     rating: 4.5,
     url: "https://pushsquare.com",
+  },
+  // Movies
+  {
+    id: "38",
+    title: "IMDb",
+    author: "IMDb Team",
+    description:
+      "The world's most popular and authoritative source for movie, TV, and celebrity content. Reviews, ratings, trailers, and more.",
+    category: "movies",
+    tags: ["movies", "tv", "reviews", "ratings"],
+    subscribers: 420000,
+    frequency: "daily",
+    imageColor: "from-yellow-500 to-amber-600",
+    imageIcon: "🎥",
+    featured: true,
+    rating: 4.8,
+    url: "https://imdb.com",
+  },
+  {
+    id: "39",
+    title: "Netflix",
+    author: "Netflix Team",
+    description:
+      "Everything Netflix - new shows, movies, original content, and streaming news. Stay updated on what's next.",
+    category: "movies",
+    tags: ["netflix", "streaming", "tv shows", "movies"],
+    subscribers: 380000,
+    frequency: "weekly",
+    imageColor: "from-red-600 to-rose-700",
+    imageIcon: "📺",
+    featured: true,
+    rating: 4.7,
+    url: "https://netflix.com",
+  },
+  {
+    id: "40",
+    title: "HBO",
+    author: "HBO Team",
+    description:
+      "HBO original series, movies, and documentaries. The权威 source for HBO content news and updates.",
+    category: "movies",
+    tags: ["hbo", "tv shows", "originals", "documentaries"],
+    subscribers: 210000,
+    frequency: "weekly",
+    imageColor: "from-purple-600 to-indigo-700",
+    imageIcon: "🎭",
+    featured: false,
+    rating: 4.6,
+    url: "https://hbomax.com",
+  },
+  {
+    id: "41",
+    title: "Rotten Tomatoes",
+    author: "Rotten Tomatoes Team",
+    description:
+      "Movie reviews, ratings, and news. The权威 source for film critics and what to watch next.",
+    category: "movies",
+    tags: ["movies", "reviews", "ratings", "film"],
+    subscribers: 165000,
+    frequency: "daily",
+    imageColor: "from-red-500 to-orange-600",
+    imageIcon: "🍅",
+    featured: true,
+    rating: 4.7,
+    url: "https://rottentomatoes.com",
+  },
+  {
+    id: "42",
+    title: "Disney",
+    author: "Disney Team",
+    description:
+      "Disney, Pixar, Marvel, and Star Wars. All things Disney - movies, shows, and updates from the House of Mouse.",
+    category: "movies",
+    tags: ["disney", "marvel", "pixar", "star wars"],
+    subscribers: 195000,
+    frequency: "weekly",
+    imageColor: "from-blue-500 to-cyan-600",
+    imageIcon: "🏰",
+    featured: false,
+    rating: 4.6,
+    url: "https://disney.com",
+  },
+  {
+    id: "43",
+    title: "FlixPatrol",
+    author: "FlixPatrol Team",
+    description:
+      "Streaming charts and statistics. Track which movies and TV shows are trending on Netflix, Disney+, HBO, and more.",
+    category: "movies",
+    tags: ["streaming", "charts", "trending", "statistics"],
+    subscribers: 87000,
+    frequency: "daily",
+    imageColor: "from-green-500 to-teal-600",
+    imageIcon: "📊",
+    featured: false,
+    rating: 4.5,
+    url: "https://flixpatrol.com",
   },
 ];
 
