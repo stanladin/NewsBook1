@@ -8,7 +8,8 @@ export type Category =
   | "science"
   | "sports"
   | "travel"
-  | "culture";
+  | "culture"
+  | "gaming";
 
 export interface Newsletter {
   id: string;
@@ -124,6 +125,15 @@ export const CATEGORIES: {
     bgColor: "bg-purple-50",
     description: "Arts, entertainment, and pop culture",
     mostSearched: "IGN",
+  },
+  {
+    id: "gaming",
+    label: "Gaming",
+    icon: "🎮",
+    color: "text-indigo-600",
+    bgColor: "bg-indigo-50",
+    description: "Video games, reviews, and gaming news",
+    mostSearched: "PC Gamer",
   },
 ];
 
@@ -601,6 +611,71 @@ export const NEWSLETTERS: Newsletter[] = [
     featured: false,
     rating: 4.5,
     url: "https://variety.com",
+  },
+  // Gaming
+  {
+    id: "30",
+    title: "PC Gamer",
+    author: "PC Gamer Team",
+    description:
+      "The world's best PC gaming publication. Reviews, previews, hardware guides, and everything PC gaming from the experts.",
+    category: "gaming",
+    tags: ["pc", "gaming", "reviews", "hardware"],
+    subscribers: 185000,
+    frequency: "weekly",
+    imageColor: "from-indigo-500 to-purple-600",
+    imageIcon: "💻",
+    featured: true,
+    rating: 4.8,
+    url: "https://pcgamer.com",
+  },
+  {
+    id: "25",
+    title: "GameSpot",
+    author: "GameSpot Team",
+    description:
+      "GameSpot is the world's leading source for PC, PlayStation, Xbox, Wii, and video game news, reviews, previews, trailers, movies, anime and comics.",
+    category: "gaming",
+    tags: ["gaming", "video games", "reviews", "news"],
+    subscribers: 112000,
+    frequency: "daily",
+    imageColor: "from-green-500 to-teal-600",
+    imageIcon: "🎮",
+    featured: false,
+    rating: 4.6,
+    url: "https://gamespot.com",
+  },
+  {
+    id: "21",
+    title: "IGN",
+    author: "IGN Editorial Team",
+    description:
+      "The world's leading source for video game news, reviews, and coverage. Xbox, PlayStation, Nintendo, PC and mobile gaming.",
+    category: "gaming",
+    tags: ["gaming", "video games", "reviews", "news"],
+    subscribers: 98000,
+    frequency: "weekly",
+    imageColor: "from-red-500 to-orange-600",
+    imageIcon: "🎯",
+    featured: true,
+    rating: 4.7,
+    url: "https://ign.com",
+  },
+  {
+    id: "31",
+    title: "Push Square",
+    author: "Push Square Team",
+    description:
+      "Your daily source for PlayStation news, reviews, and features. Covering PS5, PS4, PS VR, and the entire PlayStation ecosystem.",
+    category: "gaming",
+    tags: ["playstation", "ps5", "ps4", "gaming"],
+    subscribers: 67000,
+    frequency: "daily",
+    imageColor: "from-blue-500 to-indigo-600",
+    imageIcon: "🎮",
+    featured: false,
+    rating: 4.5,
+    url: "https://pushsquare.com",
   },
 ];
 
