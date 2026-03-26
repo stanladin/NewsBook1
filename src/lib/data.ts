@@ -131,8 +131,8 @@ export const NEWSLETTERS: Newsletter[] = [
   // Tech
   {
     id: "1",
-    title: "The Byte Brief",
-    author: "Alex Chen",
+    title: "Forbes Tech",
+    author: "Forbes Editorial Team",
     description:
       "Your daily digest of the most important tech stories, from AI breakthroughs to startup funding. Concise, insightful, and always ahead of the curve.",
     category: "tech",
@@ -143,12 +143,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "💻",
     featured: true,
     rating: 4.8,
-    url: "#",
+    url: "https://forbes.com",
   },
   {
     id: "2",
-    title: "Silicon Dispatch",
-    author: "Maya Patel",
+    title: "TechCrunch",
+    author: "TechCrunch Team",
     description:
       "Deep dives into Silicon Valley culture, venture capital trends, and the humans behind the world's most influential tech companies.",
     category: "tech",
@@ -159,12 +159,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🚀",
     featured: false,
     rating: 4.6,
-    url: "#",
+    url: "https://techcrunch.com",
   },
   {
     id: "3",
-    title: "AI Weekly",
-    author: "Dr. Sam Torres",
+    title: "Wired",
+    author: "Wired Editorial Team",
     description:
       "The most comprehensive weekly roundup of artificial intelligence research, product launches, and ethical discussions in the AI space.",
     category: "tech",
@@ -175,12 +175,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🤖",
     featured: true,
     rating: 4.9,
-    url: "#",
+    url: "https://wired.com",
   },
   {
     id: "4",
-    title: "DevPulse",
-    author: "Jordan Kim",
+    title: "The Verge",
+    author: "The Verge Team",
     description:
       "Essential reads for software developers: new frameworks, open source highlights, coding tips, and career advice in the tech industry.",
     category: "tech",
@@ -191,14 +191,14 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "⚡",
     featured: false,
     rating: 4.5,
-    url: "#",
+    url: "https://theverge.com",
   },
   {
     id: "22",
-    title: "Mobile Matters",
-    author: "Tara Singh",
+    title: "Engadget",
+    author: "Engadget Editorial",
     description:
-      "The essential weekly newsletter for mobile enthusiasts and developers. Covers iOS and Android app trends, mobile UX best practices, smartphone hardware reviews, and the business of mobile websites and apps.",
+      "The essential weekly newsletter for mobile enthusiasts and developers. Covers iOS and Android app trends, mobile UX best practices, smartphone hardware reviews.",
     category: "tech",
     tags: ["mobile", "iOS", "Android", "apps", "smartphone", "mobile web", "UX", "app development"],
     subscribers: 74000,
@@ -207,14 +207,14 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "📱",
     featured: false,
     rating: 4.6,
-    url: "#",
+    url: "https://engadget.com",
   },
   {
     id: "23",
-    title: "App Economy Weekly",
-    author: "Chris Barrett",
+    title: "Ars Technica",
+    author: "Ars Technica Team",
     description:
-      "Deep-dive analysis of the mobile app market, app store optimization, monetization strategies, and growth tactics for mobile websites and native apps on iOS and Android.",
+      "Deep-dive analysis of the mobile app market, app store optimization, monetization strategies, and growth tactics for mobile websites and native apps.",
     category: "tech",
     tags: ["mobile", "apps", "app store", "iOS", "Android", "mobile websites", "monetization", "ASO"],
     subscribers: 51000,
@@ -223,13 +223,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "📲",
     featured: false,
     rating: 4.4,
-    url: "#",
+    url: "https://arstechnica.com",
   },
   // Fashion
   {
     id: "5",
-    title: "Vogue Insider",
-    author: "Isabella Rossi",
+    title: "Vogue",
+    author: "Vogue Editorial Team",
     description:
       "Exclusive runway reports, trend forecasts, and behind-the-scenes access to the world's most prestigious fashion houses and designers.",
     category: "fashion",
@@ -240,12 +240,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "👗",
     featured: true,
     rating: 4.7,
-    url: "#",
+    url: "https://vogue.com",
   },
   {
     id: "6",
-    title: "Street Style Weekly",
-    author: "Zoe Martin",
+    title: "GQ",
+    author: "GQ Editorial Team",
     description:
       "Celebrating real fashion from real people. Street style photography, affordable trend alerts, and sustainable fashion spotlights.",
     category: "fashion",
@@ -256,12 +256,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "📸",
     featured: false,
     rating: 4.4,
-    url: "#",
+    url: "https://gq.com",
   },
   {
     id: "7",
-    title: "The Fashion Report",
-    author: "Marcus Delacroix",
+    title: "Elle",
+    author: "Elle Editorial Team",
     description:
       "Industry analysis, brand partnerships, and fashion business news. Essential reading for professionals in the fashion ecosystem.",
     category: "fashion",
@@ -272,13 +272,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "💎",
     featured: false,
     rating: 4.3,
-    url: "#",
+    url: "https://elle.com",
   },
   // Cooking
   {
     id: "8",
-    title: "The Kitchen Table",
-    author: "Chef Maria Santos",
+    title: "Bon Appétit",
+    author: "Bon Appétit Team",
     description:
       "Seasonal recipes, cooking techniques, and food stories from kitchens around the world. Perfect for home cooks of every skill level.",
     category: "cooking",
@@ -289,12 +289,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🍳",
     featured: true,
     rating: 4.8,
-    url: "#",
+    url: "https://bonappetit.com",
   },
   {
     id: "9",
-    title: "Flavor Lab",
-    author: "David Nguyen",
+    title: "Serious Eats",
+    author: "Serious Eats Team",
     description:
       "The science of cooking meets creative experimentation. Molecular gastronomy, food chemistry, and innovative recipes for adventurous palates.",
     category: "cooking",
@@ -305,12 +305,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🧪",
     featured: false,
     rating: 4.6,
-    url: "#",
+    url: "https://seriouseats.com",
   },
   {
     id: "10",
-    title: "Global Eats",
-    author: "Priya Sharma",
+    title: "Food52",
+    author: "Food52 Team",
     description:
       "Explore world cuisines from the comfort of your kitchen. Authentic recipes, cultural context, and ingredient guides from every continent.",
     category: "cooking",
@@ -321,13 +321,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🌮",
     featured: false,
     rating: 4.7,
-    url: "#",
+    url: "https://food52.com",
   },
   // World News
   {
     id: "11",
-    title: "The Global Brief",
-    author: "Reuters Editorial Team",
+    title: "BBC News",
+    author: "BBC Editorial Team",
     description:
       "Unbiased, comprehensive coverage of international news. Stay informed on geopolitics, economics, and humanitarian issues affecting our world.",
     category: "world-news",
@@ -338,12 +338,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🌍",
     featured: true,
     rating: 4.7,
-    url: "#",
+    url: "https://bbc.com/news",
   },
   {
     id: "12",
-    title: "Asia Correspondent",
-    author: "Li Wei Zhang",
+    title: "The Guardian",
+    author: "The Guardian Team",
     description:
       "Your trusted source for news across Asia-Pacific. From politics and economics to culture and society across the world's most populous region.",
     category: "world-news",
@@ -354,12 +354,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🗺️",
     featured: false,
     rating: 4.5,
-    url: "#",
+    url: "https://theguardian.com",
   },
   {
     id: "13",
-    title: "Climate Watch",
-    author: "Environmental Press Collective",
+    title: "Reuters",
+    author: "Reuters Editorial Team",
     description:
       "Dedicated coverage of climate change, environmental policy, and green technology solutions shaping the future of our planet.",
     category: "world-news",
@@ -370,13 +370,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🌱",
     featured: false,
     rating: 4.6,
-    url: "#",
+    url: "https://reuters.com",
   },
   // Finance
   {
     id: "14",
-    title: "Market Pulse",
-    author: "Sarah Bloomberg",
+    title: "Bloomberg",
+    author: "Bloomberg Editorial Team",
     description:
       "Daily market updates, investment analysis, and financial news. From stocks and crypto to real estate and commodities.",
     category: "finance",
@@ -387,12 +387,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "📈",
     featured: true,
     rating: 4.6,
-    url: "#",
+    url: "https://bloomberg.com",
   },
   {
     id: "15",
-    title: "Personal Finance Pro",
-    author: "Robert Chen",
+    title: "CNBC",
+    author: "CNBC Team",
     description:
       "Practical money advice for everyday people. Budgeting strategies, retirement planning, tax tips, and wealth-building for all income levels.",
     category: "finance",
@@ -403,13 +403,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "💰",
     featured: false,
     rating: 4.5,
-    url: "#",
+    url: "https://cnbc.com",
   },
   // Health
   {
     id: "16",
-    title: "Wellness Weekly",
-    author: "Dr. Emma Wilson",
+    title: "WebMD",
+    author: "WebMD Editorial Team",
     description:
       "Evidence-based health tips, nutrition science, mental wellness strategies, and the latest medical research made accessible for everyone.",
     category: "health",
@@ -420,12 +420,12 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🏃",
     featured: true,
     rating: 4.7,
-    url: "#",
+    url: "https://webmd.com",
   },
   {
     id: "17",
-    title: "The Mindful Digest",
-    author: "Dr. James Park",
+    title: "Healthline",
+    author: "Healthline Team",
     description:
       "Meditation, mindfulness, and mental health resources. Weekly practices, research insights, and expert interviews on psychological wellbeing.",
     category: "health",
@@ -436,13 +436,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🧘",
     featured: false,
     rating: 4.8,
-    url: "#",
+    url: "https://healthline.com",
   },
   // Science
   {
     id: "18",
-    title: "Science Digest",
-    author: "Nature Media Group",
+    title: "National Geographic",
+    author: "Nat Geo Team",
     description:
       "Weekly highlights from the world of science — space exploration, biology, physics, and the discoveries changing our understanding of the universe.",
     category: "science",
@@ -453,13 +453,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🔬",
     featured: true,
     rating: 4.9,
-    url: "#",
+    url: "https://nationalgeographic.com",
   },
   // Sports
   {
     id: "19",
-    title: "The Sporting Edge",
-    author: "Sports Analytics Team",
+    title: "ESPN",
+    author: "ESPN Editorial Team",
     description:
       "In-depth sports analysis, fantasy insights, and behind-the-scenes stories. Data-driven takes on football, basketball, tennis, and more.",
     category: "sports",
@@ -470,13 +470,29 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "⚽",
     featured: true,
     rating: 4.6,
-    url: "#",
+    url: "https://espn.com",
+  },
+  {
+    id: "24",
+    title: "Top Gear",
+    author: "Top Gear Team",
+    description:
+      "The world's biggest car magazine. Reviews, news, and everything automotive including motorsport and car culture.",
+    category: "sports",
+    tags: ["cars", "motorsport", "reviews", "automotive"],
+    subscribers: 145000,
+    frequency: "weekly",
+    imageColor: "from-red-500 to-orange-600",
+    imageIcon: "🏎️",
+    featured: false,
+    rating: 4.7,
+    url: "https://topgear.com",
   },
   // Travel
   {
     id: "20",
-    title: "Wanderlust Weekly",
-    author: "The Globe Trotters Collective",
+    title: "Condé Nast Traveler",
+    author: "CNT Editorial Team",
     description:
       "Hidden gems, travel hacks, destination guides, and inspiring stories from travelers around the world. Your passport to adventure.",
     category: "travel",
@@ -487,13 +503,13 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "✈️",
     featured: true,
     rating: 4.8,
-    url: "#",
+    url: "https://cntraveler.com",
   },
   // Culture
   {
     id: "21",
-    title: "Culture Club",
-    author: "Arts & Culture Desk",
+    title: "IGN",
+    author: "IGN Editorial Team",
     description:
       "Film, music, literature, and art — your weekly guide to the cultural moments worth experiencing and the conversations shaping our society.",
     category: "culture",
@@ -504,7 +520,39 @@ export const NEWSLETTERS: Newsletter[] = [
     imageIcon: "🎭",
     featured: true,
     rating: 4.7,
-    url: "#",
+    url: "https://ign.com",
+  },
+  {
+    id: "25",
+    title: "GameSpot",
+    author: "GameSpot Team",
+    description:
+      "GameSpot is the world's leading source for PC, PlayStation, Xbox, Wii, and video game news, reviews, previews, trailers, movies, anime and comics.",
+    category: "culture",
+    tags: ["gaming", "video games", "reviews", "news"],
+    subscribers: 112000,
+    frequency: "daily",
+    imageColor: "from-green-500 to-teal-600",
+    imageIcon: "🎮",
+    featured: false,
+    rating: 4.6,
+    url: "https://gamespot.com",
+  },
+  {
+    id: "26",
+    title: "Variety",
+    author: "Variety Editorial Team",
+    description:
+      "Entertainment news, reviews, and analysis. The权威 source for Hollywood, streaming, music and movie industry coverage.",
+    category: "culture",
+    tags: ["entertainment", "movies", "tv", "hollywood"],
+    subscribers: 87000,
+    frequency: "weekly",
+    imageColor: "from-purple-600 to-pink-600",
+    imageIcon: "🎬",
+    featured: false,
+    rating: 4.5,
+    url: "https://variety.com",
   },
 ];
 

@@ -31,6 +31,7 @@ NewsBook is a complete newsletter discovery and curation app built on Next.js 16
 - [x] **Category cards with newsletter list and favorite icons** (2026-03-26)
   - Each category card now shows top 3 newsletters with a heart icon
   - Heart icon allows marking newsletters as favorites directly from category view
+  - Updated newsletter data with real website names: Forbes, TechCrunch, Wired, The Verge, Engadget, Ars Technica, Vogue, GQ, Elle, Bon Appétit, Serious Eats, Food52, BBC, The Guardian, Reuters, Bloomberg, CNBC, WebMD, Healthline, National Geographic, ESPN, Top Gear, Condé Nast Traveler, IGN, GameSpot, Variety
 
 ## Current Structure
 
