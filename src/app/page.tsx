@@ -208,6 +208,40 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Contact */}
+        <section>
+          <div className="bg-gray-900 rounded-3xl p-8 sm:p-12 text-white">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-3xl font-black mb-3">
+                Contact Us
+              </h2>
+              <p className="text-gray-400 mb-6">
+                Have questions or suggestions? We&apos;d love to hear from you.
+              </p>
+              <a
+                href="mailto:stanladin@gmail.com"
+                className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 font-bold px-8 py-3 rounded-2xl hover:bg-gray-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+                stanladin@gmail.com
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
