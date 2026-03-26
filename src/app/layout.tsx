@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A minimal Next.js starter template",
+  title: "NewsBook — Your Personal Newsletter Library",
+  description:
+    "Search, discover, and save the world's best newsletters across tech, fashion, cooking, world news, and more.",
+  keywords: ["newsletters", "tech", "fashion", "cooking", "news", "subscribe"],
 };
 
 export default function RootLayout({
@@ -24,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} font-sans antialiased bg-gray-50`}>
+        <Navbar />
         {children}
       </body>
     </html>
