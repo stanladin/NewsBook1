@@ -57,7 +57,7 @@ export default function CategoriesPage() {
             Our top four categories with the most popular newsletters
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(["tech", "fashion", "cooking", "world-news"] as const).map((catId) => {
+            {(["world-news", "sports", "health", "fashion"] as const).map((catId) => {
               const cat = CATEGORIES.find((c) => c.id === catId)!;
               const newsletters = NEWSLETTERS.filter((n) => n.category === catId)
                 .sort((a, b) => b.subscribers - a.subscribers)
@@ -77,7 +77,9 @@ export default function CategoriesPage() {
                     {newsletters.map((n) => (
                       <li key={n.id}>
                         <a
-                          href={`/newsletter/${n.id}`}
+                          href={n.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-sm font-medium text-gray-700 hover:text-gray-900 flex items-center gap-2 group"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-blue-500 shrink-0 transition-colors"></span>
