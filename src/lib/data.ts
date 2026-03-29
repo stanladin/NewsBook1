@@ -832,7 +832,7 @@ export const NEWSLETTERS: Newsletter[] = [
     url: "https://pcgamer.com",
   },
   {
-    id: "25",
+    id: "51",
     title: "GameSpot",
     author: "GameSpot Team",
     description:
@@ -848,7 +848,7 @@ export const NEWSLETTERS: Newsletter[] = [
     url: "https://gamespot.com",
   },
   {
-    id: "21",
+    id: "50",
     title: "IGN",
     author: "IGN Editorial Team",
     description:
